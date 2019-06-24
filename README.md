@@ -17,3 +17,16 @@ For each satellite dataset, corresponding transfer values are then fed into the 
 > - ##### Mapping the outputs and evaluation of the Model.
 To map the prediction results in entire area of the city, each satellite map is sequentially clipped and fed into the Inception Net to collect transfer values which are further fed into the Neural Network to obtain model results. These results are then mapped over the corresponding satellite patches.
 
+#### The Folders in the repository.
+> - `data_generation` includes the data files and the scripts to create datasets for training and prediction.
+> - `/point-based-samples/` include *kml* file created from *path* tool and the notebook to convert *kml* to *csv*.
+> - `/scripts/` include python scripts to create fixed size buffers given lat long/pair in QGIS platform.
+> - `/creating_clips_using_gdal.ipynb` creates sequential clips of the satellite imagery, which are used for final predictions.
+> - `/data_generation_mumbai.ipynb` converts patches to array format for further processing through Transfer Learning.
+> - `data_processing` consists notebook to implement Transfer Learning.
+> - `data_plotting` consists of notebook to assign the Transfer Learning predictions to the corresponding sequential clips.
+
+
+The Entire procedure and other details are further discussed in the [Research Paper.](https://www.sciencedirect.com/science/article/pii/S0197397518306982)
+
+
